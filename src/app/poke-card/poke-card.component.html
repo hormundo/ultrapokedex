@@ -1,7 +1,7 @@
-<div class="pokemon">
+<div class="pokemon {{pokemon.type1}}">
   <h1 mat-dialog-title class="title">#{{pokemon.id}} {{pokemon.name | titlecase}}</h1>
   <div class="params abs">
-    <span class=""></span><span class=""></span>
+    <span class="{{pokemon.type1}}">{{pokemon.type1}}</span><span class="{{pokemon.type2}}">{{pokemon.type2}}</span>
   </div>
   <div class="section">
     <img src="{{pokemon.sprite}}" alt="{{pokemon.name}}">

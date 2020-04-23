@@ -195,6 +195,8 @@ export class SidenavComponent {
                         height: dataPokemon.height,
                         weight: dataPokemon.weight,
                         types: this.setTypes,
+                        type1: this.setTypes[0],
+                        type2: this.setTypes[1],
                         imageObject: sprites,
                         stats: stats,
                         nameEvolution_1: this.nameEvolution_1,

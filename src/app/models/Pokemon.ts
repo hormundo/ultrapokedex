@@ -6,6 +6,8 @@ export class Pokemon {
   height: number;
   weight: number;
   types: string[];
+  type1: string[];
+  type2: string[];
   imageObject: string[];
   stats: any[];
   nameEvolution_1: string;
