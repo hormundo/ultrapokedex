@@ -1,7 +1,7 @@
-<div class="pokemon {{pokemon.type1}}">
+<div class="pokemon">
   <h1 mat-dialog-title class="title">#{{pokemon.id}} {{pokemon.name | titlecase}}</h1>
   <div class="params abs">
-    <span class="{{pokemon.type1}}">{{pokemon.type1}}</span><span class="{{pokemon.type2}}">{{pokemon.type2}}</span>
+    <span class=""></span><span class=""></span>
   </div>
   <div class="section">
     <img src="{{pokemon.sprite}}" alt="{{pokemon.name}}">
@@ -145,7 +145,7 @@
     
     <div>
       <p>No produce daño a:</p>
-        <div class="element" *ngFor="let element of pokemon.no_damage_tp">
+        <div class="element" *ngFor="let element of pokemon.no_damage_to">
           <span class="element {{element}}">{{element}}</span>
         </div>
     </div>
