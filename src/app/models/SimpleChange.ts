@@ -1,0 +1,3 @@
+class SimpleChange {
+    nextPage: number
+  }

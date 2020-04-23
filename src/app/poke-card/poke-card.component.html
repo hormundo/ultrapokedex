@@ -1,0 +1,162 @@
+<div class="pokemon {{pokemon.type1}}">
+  <h1 mat-dialog-title class="title">#{{pokemon.id}} {{pokemon.name | titlecase}}</h1>
+  <div class="params abs">
+    <span class="{{pokemon.type1}}">{{pokemon.type1}}</span><span class="{{pokemon.type2}}">{{pokemon.type2}}</span>
+  </div>
+  <div class="section">
+    <img src="{{pokemon.sprite}}" alt="{{pokemon.name}}">
+
+    <div class="section stats">
+      <div class="stats" *ngFor="let stat of pokemon.stats">
+        <div class="stat">
+          <p class="nameStat">{{stat.nameStat}}</p>
+          <mat-progress-bar class="bar" mode="determinate" value="{{stat.baseStatMod}}"></mat-progress-bar>
+          <p class="baseStat">{{stat.baseStat}}</p>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  <div class="params borderb">
+    <span class="simple">Altura: {{pokemon.height}}</span><span class="simple">Peso:{{pokemon.weight}}</span>
+    <span class="ratio_capture simple">Ratio de captura: {{pokemon.ratio_capture}}</span>
+  </div>
+  
+  
+  <div class="lore borderb">{{pokemon.lore}}</div>
+  <div class="evolve" *ngIf="pokemon.spriteEvolution_1==''">
+    <p>Este pokemon no tiene evolución.</p>
+  </div>
+  <div class="evolves" *ngIf="pokemon.spriteEvolution_1!=''">
+      <h1 mat-dialog-title class="title">CADENA DE EVOLUCIÓN</h1>
+      <div class="wrapperEvolves">
+          <div class="evolve">
+              <p class="nameEvolve">{{pokemon.nameEvolution_1}}</p>
+              <img src="{{pokemon.spriteEvolution_1}}" alt="{{pokemon.nameEvolution_1}}">
+              <mat-icon>arrow_right_alt</mat-icon>
+          </div>
+          
+          <div class="evolve" *ngIf="pokemon.nameEvolution_2!=''">
+              <p class="nameEvolve">{{pokemon.nameEvolution_2}}</p>
+              <img src="{{pokemon.spriteEvolution_2}}" alt="{{pokemon.nameEvolution_2}}">
+              <mat-icon>arrow_right_alt</mat-icon>
+          </div>
+      
+          <div class="evolve" *ngIf="pokemon.nameEvolution_3!=''">
+              <p class="nameEvolve">{{pokemon.nameEvolution_3}}</p>
+              <img src="{{pokemon.spriteEvolution_3}}" alt="{{pokemon.nameEvolution_3}}">
+          </div>
+        </div>
+        <div class="evolves" *ngIf="pokemon.name==='eevee' || pokemon.name==='vaporeon' || pokemon.name==='jolteon' || 
+        pokemon.name==='flareon' || pokemon.name==='espeon' || pokemon.name==='umbreon' || pokemon.name==='leafeon' || 
+        pokemon.name==='glaceon' || pokemon.name==='sylveon'">
+      
+        <div class="evolve">
+            <p class="nameEvolve">Eevee</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/133.png" alt="Eevee">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+          
+        <div class="evolve">
+            <p class="nameEvolve">Vaporeon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/134.png" alt="Vaporeon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+      
+        <div class="evolve">
+            <p class="nameEvolve">jolteon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/135.png" alt="Jolteon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+          
+        <div class="evolve">
+            <p class="nameEvolve">Flareon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/136.png" alt="Flareon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+        
+        <div class="evolve">
+            <p class="nameEvolve">Espeon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/137.png" alt="Espeon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+          
+        <div class="evolve">
+            <p class="nameEvolve">Umbreon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/197.png" alt="Umbreon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+      
+        <div class="evolve">
+            <p class="nameEvolve">Leafeon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/470.png" alt="Leafeon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+          
+        <div class="evolve">
+            <p class="nameEvolve">Glaceon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/471.png" alt="Glaceon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+          
+        <div class="evolve">
+            <p class="nameEvolve">Sylveon</p>
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/700.png" alt="Sylveon">
+            <mat-icon>arrow_right_alt</mat-icon>
+        </div>
+      </div>
+  </div>
+  
+  <div class="section fortalezas_debilidades">
+    <div>
+      <p>Recibe daño x2 de:</p>
+      <div class="element" *ngFor="let element of pokemon.double_damage_from">
+        <span class="element {{element}}">{{element}}</span>
+      </div>
+    </div>
+    
+    <div>
+      <p>Produce daño x2 a:</p>   
+        <div class="element" *ngFor="let element of pokemon.double_damage_to">
+          <span class="element {{element}}">{{element}}</span>
+        </div>
+    </div>
+    
+    <div>
+      <p>Recibe 1/2 daño de:</p>
+      <div class="element" *ngFor="let element of pokemon.half_damage_from">
+          <span class="element {{element}}">{{element}}</span>
+        </div>
+    </div>
+    
+    <div>
+      <p>Produce 1/2 daño a</p>
+      <div class="element" *ngFor="let element of pokemon.half_damage_to">
+        <span class="element {{element}}">{{element}}</span>
+      </div>
+    </div>
+    
+    <div>
+      <p>No recibe daño de:</p>
+      <div class="element" *ngFor="let element of pokemon.no_damage_from">
+          <span class="element {{element}}">{{element}}</span>
+        </div>
+    </div>
+    
+    <div>
+      <p>No produce daño a:</p>
+        <div class="element" *ngFor="let element of pokemon.no_damage_tp">
+          <span class="element {{element}}">{{element}}</span>
+        </div>
+    </div>
+    
+  </div>
+
+  <!--<div class="forms">
+    <ng-image-slider [images]="pokemon.imageObject" #nav></ng-image-slider>
+  </div>-->
+  <div mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cerrar</button>
+  </div>
+  
+</div>

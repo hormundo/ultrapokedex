@@ -1,0 +1,21 @@
+<mat-sidenav-container class="example-container" (backdropClick)="close('backdrop')">
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+    <p><button class="openMenu" mat-button (click)="close('toggle button')">Toggle</button></p>
+    <ul>
+      <li><button (click)="selectGeneracion(1)"> 1ª generación</button></li>
+      <li><button (click)="selectGeneracion(2)"> 2ª generación</button></li>
+      <li><button (click)="selectGeneracion(3)"> 3ª generación</button></li>
+      <li><button (click)="selectGeneracion(4)"> 4ª generación</button></li>
+      <li><button (click)="selectGeneracion(5)"> 5ª generación</button></li>
+      <li><button (click)="selectGeneracion(6)"> 6ª generación</button></li>
+      <li><button (click)="selectGeneracion(7)"> 7ª generación</button></li>
+    </ul>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <p><button mat-button (click)="sidenav.open()">Open</button></p>
+    <h1 style="text-align: center;">{{generacion}}ª generación</h1>
+    <app-list-pokemon [pokemons]="pokemons"></app-list-pokemon>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

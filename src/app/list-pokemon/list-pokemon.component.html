@@ -1,0 +1,31 @@
+<div class="main">     
+  <div class="container" *ngIf="pokemons?.length > 0; else espera">
+  
+      <mat-form-field class="example-full-width">
+          <input matInput placeholder="Search pokemon" name="search" [(ngModel)]="searchText">
+        </mat-form-field>
+    <div class="row cards col-12">
+
+      <div class="column card col-3" *ngFor="let pokemon of pokemons | filter:searchText">
+          <mat-card (click)="openDialog(pokemon)">
+            <p class="id_namePokemon">{{pokemon.id}} {{pokemon.name | titlecase}}</p>
+          </mat-card>
+          <div class="forms">
+            <ng-image-slider [images]="pokemon.imageObject" #nav></ng-image-slider>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #espera>Capturando pokemons...
+  <div class="wrapper_pokeball">
+      <div class="item">
+          <div class="ball"></div>
+          <div class="half-ball"></div>
+          <div class="big-button"></div>
+          <div class="small-button"></div>
+          <div class="horizon"></div>
+      </div>
+</div>
+</ng-template>

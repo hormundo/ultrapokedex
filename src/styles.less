@@ -1,0 +1,391 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+@font-face {
+    font-family: pokemon;
+    src: url(../src/assets/fonts/pokemon-solid.ttf) format("opentype");
+  }
+
+  * {
+      font-family: pokemon;
+      letter-spacing: .5px;
+  }
+
+.borderb {
+    border-bottom: 1px solid #555555;
+    margin-bottom: 15px;
+}
+
+.params, .element {
+    span {
+        padding: 3px 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: white;
+        border-radius: 20px;
+        font-size: .7rem;
+        letter-spacing: 1px;
+        margin-right: 15px;
+        &.grass {
+            background-color: rgb(76, 140, 44);
+        }
+        
+        &.fire {
+            background-color: rgb(240, 128, 48);
+        }
+        
+        &.flying {
+            background-color: rgb(168, 144, 240);
+        }
+        
+        &.water {
+            background-color: rgb(104, 144, 240);
+        }
+        
+        &.normal {
+            background-color: rgb(168, 168, 120);
+        }
+        
+        &.fighting {
+            background-color: rgb(192, 48, 40);
+        }
+        
+        &.poison {
+            background-color: rgb(160, 64, 160);
+        }
+        
+        &.ground {
+            background-color: rgb(219, 181, 77);
+        }
+        
+        &.rock {
+            background-color: rgb(164, 143, 50);
+        }
+        
+        &.bug {
+            background-color: rgb(151, 165, 29);
+        }
+        
+        &.ghost {
+            background-color: rgb(74, 58, 100);
+        }
+        
+        &.steel {
+            background-color: rgb(160, 160, 192);
+        }
+        
+        &.electric {
+            background-color: rgb(246, 201, 19);     
+        }
+        
+        &.psychic {
+            background-color: rgb(247, 54, 112); 
+        }
+        
+        &.ice {
+            background-color: rgb(126, 206, 206);    
+        }
+        
+        &.dragon {
+            background-color: rgb(94, 29, 247);  
+        }
+        
+        &.dark {
+            background-color: rgb(100, 78, 64);
+        }
+        
+        &.fairy {
+            background-color: rgb(232, 120, 144); 
+        }
+    }
+
+    .simple {
+        color: #555555;
+        padding: 0;
+        background-color: transparent;
+    }
+    
+    
+}
+
+.pokemon {
+    position: relative;
+
+    .abs {
+        margin-bottom: 15px;
+    }
+    .title {
+        text-align: center;
+        font-weight: bold;
+        color: white;
+    }
+    &.grass {
+        .mat-dialog-title {
+            background-color: rgb(76, 140, 44);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(76, 140, 44);
+            }
+        }      
+    }
+
+    &.fire {
+        .mat-dialog-title {
+            background-color: rgb(240, 128, 48);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(240, 128, 48);
+            }
+        }   
+    }
+
+    &.flying {
+        .mat-dialog-title {
+            background-color: rgb(168, 144, 240) 50%;
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(168, 144, 240) 50%;
+            }
+        }
+    }
+
+    &.water {
+        .mat-dialog-title {
+            background-color: rgb(104, 144, 240);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(104, 144, 240);
+            }
+        }        
+    }
+
+    &.normal {
+        .mat-dialog-title {
+            background-color: rgb(168, 168, 120);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(168, 168, 120);
+            }
+        }
+    }
+
+    &.fighting {
+        .mat-dialog-title {
+            background-color: rgb(192, 48, 40);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background: rgb(192, 48, 40);
+            }
+        }      
+    }
+
+    &.poison {
+        .mat-dialog-title {
+            background-color: rgb(160, 64, 160);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(160, 64, 160);
+            }
+        }
+    }
+
+    &.ground {
+        .mat-dialog-title {
+            background-color: rgb(219, 181, 77);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(219, 181, 77);
+            }
+        }
+    }
+
+    &.rock {
+        .mat-dialog-title {
+            background-color: rgb(164, 143, 50);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(164, 143, 50);
+            }
+        }    
+    }
+
+    &.bug {
+        .mat-dialog-title {
+            background-color: rgb(151, 165, 29);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(151, 165, 29);
+            }
+        }     
+    }
+
+    &.ghost {
+        .mat-dialog-title {
+            background-color: rgb(74, 58, 100);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(74, 58, 100);
+            }
+        }   
+    }
+
+    &.steel {
+        .mat-dialog-title {
+            background-color: rgb(160, 160, 192);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(160, 160, 192);
+            }
+        }      
+    }
+
+    &.electric {
+        .mat-dialog-title {
+            background-color: rgb(246, 201, 19);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(246, 201, 19);
+            }
+        }        
+    }
+
+    &.psychic {
+        .mat-dialog-title {
+            background-color: rgb(247, 54, 112);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(247, 54, 112);
+            }
+        }  
+    }
+
+    &.ice {
+        .mat-dialog-title {
+            background-color: rgb(126, 206, 206);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(126, 206, 206);
+            }
+        }     
+    }
+
+    &.dragon {
+        .mat-dialog-title {
+            background-color: rgb(94, 29, 247);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(94, 29, 247);
+            }
+        }     
+    }
+
+    &.dark {
+        .mat-dialog-title {
+            background-color: rgb(100, 78, 64);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(100, 78, 64);
+            }
+        }        
+    }
+
+    &.fairy {
+        .mat-dialog-title {
+            background-color: rgb(232, 120, 144);
+        }
+        .mat-progress-bar-fill {
+            &:after {
+                background-color: rgb(232, 120, 144);
+            }
+        }      
+    }
+
+    .evolves {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .wrapperEvolves {
+            display: flex;
+            justify-content: center;
+        }
+
+        .nameEvolve {
+            margin-bottom: .5rem;
+            text-align: center;
+        }
+        .evolve:last-child {
+            .mat-icon {
+                display: none;
+            }
+        }
+    }
+
+    .section {
+        display: flex;
+        align-self: center;
+        .section {
+            &.stats {
+                display: flex;
+                flex: 1;
+                .stats {
+                    flex: 1 1 50%;
+                    max-width: 50%; 
+                    margin-left: 5%;
+                    .stat {
+                        .nameStat {
+                            margin-bottom: .5rem;
+                            font-size: .65rem;
+                        }
+                        .bar {
+                            height: 15px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.fortalezas_debilidades {
+            p {
+                font-size: .75rem;
+            }
+            div {
+                flex: 1;
+            }
+            div.element {
+                margin-bottom: 20px;
+            }
+        }
+    }  
+}
+
+
+
+ul {
+    list-style-type: none;
+    padding: 0 25px;
+    li {
+      margin-bottom: 10px;
+      button {
+        border: 0;
+        background-color: transparent;
+      }
+    }
+  }

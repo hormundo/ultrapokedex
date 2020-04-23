@@ -1,0 +1,161 @@
+.main {
+  text-align: center;
+}
+
+.container {
+  padding-top: 50px;
+  padding-bottom: 10px;
+  padding: 0;
+}
+
+
+.search-hero {
+  max-width: 500px;
+  padding-bottom: 50px;
+  margin:auto;
+}
+
+.form-control {
+  box-shadow: 0 10px 40px 0 #B0C1D9;
+}
+.form-control::placeholder  {
+  font-family: FontAwesome;
+}
+
+.mat-form-field {
+  width: 100%;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #fafafa;
+  /* padding: 15px; */
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+
+
+.cards {
+  padding: 0;
+  margin-left: 0;
+  margin-right: 0;
+  //justify-content: space-between;
+  .card {
+    padding: 0;
+    margin-left: 1.2%;
+    margin-bottom: 25px;
+    text-align: center;
+    -webkit-box-flex: 1;
+    flex: 1 1 19%;
+    max-width: 19%;
+    &:nth-child(5n+1) {
+      margin-left: 0;
+    }
+  }
+
+}
+.mat-card:hover {cursor: pointer; background-clip: border-box;}
+.wrapper_pokeball {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+}
+
+.item{ 
+  position: relative;
+  margin: auto;
+  left: 12px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-animation: loading 2s infinite;
+  animation: loading 2s infinite;
+  width: 50%;
+  height: 0%;
+}
+
+.ball{
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  border: 10px solid #1d1d1b; 
+  z-index: 100;
+  display: block;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;  
+  position: absolute;
+}
+
+.half-ball{
+  margin: auto;
+  left: 0;
+  right: 0;
+  top:100px;
+  bottom:0;
+  z-index: 0;
+  position: absolute;
+  background-color: white;
+  border-radius: 0 0 90px 90px;
+  width: 185px;
+  height: 100px;
+  background-color: #dd2120;
+}
+
+.horizon{
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom:0;    
+  margin-top: auto;
+  border-radius: 0px;
+  width: 200px;
+  height: 40px;
+  background-color: #1d1d1b;
+  z-index: 3;
+}
+
+.big-button{
+  z-index: 4;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  border-radius: 50%;
+  border: 10px solid #1d1d1b;
+  position: absolute;
+  height: 60px;
+  width: 60px; 
+  background-color: white;
+}
+
+.small-button{
+  z-index: 5;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  border-radius: 50%;
+  border: 6px solid #1d1d1b;
+  position: absolute;
+  height: 38px;
+  width: 38px; 
+  background-color: white;
+}
+
+@keyframes loading {
+  0 { transform: translate(0, 0) rotate(0); }
+  25% { transform: translate(-8px, 0) rotate(-18deg); }
+  33% { transform: translate(8px, 0) rotate(18deg); }
+  50% { transform: translate(-8px, 0) rotate(-12deg); }
+  60% { transform: translate(8px, 0) rotate(18deg); }
+  100% { transform: translate(0, 0) rotate(0); }
+}
